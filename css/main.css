@@ -43,6 +43,14 @@ body {
     margin: 0 auto;
     /* background-color: aqua; */
 }
+/* clearfix */
+.clearfix::after{
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
+}
 /* 모달창 */
 /* top버튼 */
 /* 전체 레이아웃 */
@@ -261,6 +269,7 @@ body {
   position: relative;
   display: block;
   width: 100%;
+  height: 420px;
 }
 .business li{
   position: relative;
@@ -334,4 +343,77 @@ body {
   background-position: -274px -115px;
   left: 53%;
   bottom: 80px;
+}
+/* 뉴스 */
+.news{
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 55px 0;
+  background-color: #ed1c24;
+}
+.news-bg{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background-color: #58595b;
+}
+.news-inner{
+  position: relative;
+  display: block;
+}
+.news-wrap{
+  position: relative;
+  display: block;
+  width: calc(50% - 95px);
+}
+.news-wrap:nth-child(1){
+  float: left;
+}
+.news-wrap:nth-child(2){
+  float: right;
+}
+.news-wrap h3{
+  font-size: 32px;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 45px;
+}
+.news-content{
+  position: relative;
+  display: block;
+}
+.news-list li{
+  position: relative;
+  display: block;
+  padding: 25px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.news-list li a{
+  color: #fff;
+  font-size: 16px;
+  display: block;
+  position: relative;
+}
+.news-list li a::after{
+  content: "";
+  display: block;
+  position: absolute;
+  background: url("../images/bg_common.png") no-repeat;
+  width: 48px;
+  height: 23px;
+  left: 85%;
+  bottom: -2px;
+  background-position: 0 -50px;
+}
+.news-txt{
+  position: relative;
+  display: block;
+  /* 말줄임 표시 */
+  width: 50%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

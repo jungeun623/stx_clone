@@ -8,7 +8,10 @@ window.onload = function(){
     })
     // scrollToSection()함수 작성
 function scrollToSection(sectionId){
-console.log(sectionId);
-
+// console.log(sectionId);
+// sectionId로 지정된 요소를 찾아서 section변수에 저장
+const section = document.querySelector(sectionId)
+if(section){
+    section.scrollIntoView({ behavior: "smooth" });}
 }
 };
